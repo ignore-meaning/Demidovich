@@ -1,0 +1,51 @@
+\documentclass{ctexart}
+
+\usepackage[x11names]{xcolor}   % 颜色
+\usepackage{amsmath, amssymb}   % 数学公式与符号
+\usepackage{hyperref}           % 超链接
+\usepackage{graphicx}           % 插图
+\usepackage{lmodern, bm}        % 额外字体与粗体样式
+\usepackage{calc}               % 支持不同单位的长度计算
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\hypersetup{colorlinks = true}
+
+\setlength{\lineskiplimit}{2.5pt}
+\setlength{\lineskip}{4pt}
+
+\newcommand{\Romannumeral}[1]{\MakeUppercase{\romannumeral #1}}
+\newcommand{\Pblock}[1]{\fbox{\parbox{\textwidth-28pt}{#1}}}
+\makeatletter
+\newcommand{\defeq}{\mathrel{\rlap{%
+                     \raisebox{0.3ex}{$\m@th\cdot$}}%
+                     \raisebox{-0.3ex}{$\m@th\cdot$}}%
+                     =}
+\makeatother
+
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+
+% 定义两个计数器：“定义” 和 “定理”
+\newcounter{definition}[subsection]
+\newcounter{subdefinition}[definition]
+\newcounter{theorem}[subsection]
+\newcounter{subtheorem}[theorem]
+
+\NewDocumentEnvironment{definition}{o}{\IfNoValueTF{#1}{\stepcounter{definition}\textbf{定义\,\thedefinition.}}{\stepcounter{definition}\textbf{定义\,\thedefinition\,(#1).}}}{}
+\NewDocumentEnvironment{subdefinition}{o}{\IfNoValueTF{#1}{\stepcounter{subdefinition}\textbf{定义\,\thedefinition.\thesubdefinition.}}{\stepcounter{subdefinition}\textbf{定义\,\thedefinition.\thesubdefinition\,(#1).}}}{}
+
+\NewDocumentEnvironment{theorem}{o}{\IfNoValueTF{#1}{\stepcounter{theorem}\textbf{定理\,\thetheorem.}}{\stepcounter{theorem}\textbf{定理\,\thetheorem\,(#1).}}}{}
+\NewDocumentEnvironment{subtheorem}{o}{\IfNoValueTF{#1}{\stepcounter{subtheorem}\textbf{定理\,\thetheorem.\thesubtheorem.}}{\stepcounter{subtheorem}\textbf{定理\,\thetheorem.\thesubtheorem\,(#1).}}}{}
+
+\title{吉米多维奇习题集部分解答}
+\author{陈程}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\include{chapters/1}
+%\include{chapters/draft}
+
+\end{document}
