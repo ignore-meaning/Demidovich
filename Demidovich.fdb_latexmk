@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1718464125 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1718464128 0
-  "Demidovich.aux" 1718464127 579 a06762a54b282fe709701bc76a439bd8 "pdflatex"
-  "Demidovich.out" 1718464127 633 966d9cf191c24e5bc4099eb60d5bbab3 "pdflatex"
+["pdflatex"] 1718464309 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1718464312 0
+  "Demidovich.aux" 1718464311 579 a06762a54b282fe709701bc76a439bd8 "pdflatex"
+  "Demidovich.out" 1718464311 633 966d9cf191c24e5bc4099eb60d5bbab3 "pdflatex"
   "Demidovich.tex" 1718431356 2074 7c31ba50ea4a900abb7545fc270fb762 ""
   "c:/Windows/Fonts/msyh.ttc" 1688779822 19701556 07c864a5b15e68fa47639738197fae38 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
@@ -272,8 +272,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697955174 4662804 27f73c2f767ae4579fe38abe9088e726 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697955456 7883403 84e03d0fceca6bffb2ece628408fb22b ""
   "c:/texlive/2023/texmf.cnf" 1697955141 713 e69b156964470283e0530f5060668171 ""
-  "chapters/1.aux" 1718464127 1554 352dc0c46c6a1bb5baa4457e853c442e "pdflatex"
-  "chapters/1.tex" 1718464120 56612 bdce0a46fd2200be031f62a56c0c10ec ""
+  "chapters/1.aux" 1718464311 1554 352dc0c46c6a1bb5baa4457e853c442e "pdflatex"
+  "chapters/1.tex" 1718464308 56539 5cbbe5d67a54a6329fe5b5c45b174e45 ""
   "e:/file folders/LateX/吉米多维奇/Demidovich.tex" 1718431356 2074 7c31ba50ea4a900abb7545fc270fb762 ""
   (generated)
   "Demidovich.aux"
