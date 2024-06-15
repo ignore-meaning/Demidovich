@@ -380,20 +380,25 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 \[l = \varliminf_{n \rightarrow \infty}x_n \quad \mbox{和} \quad L = \varlimsup_{n \rightarrow \infty} x_n\]
 之间，即区间 $[l,L]$ 中的任意一个数都是该数列的子列极限.
 \begin{proof}
-    因为 $\displaystyle L = \varlimsup_{n \rightarrow \infty} x_n$，所以存在数列 $x_n$ 的子列 $x_{p_n}$ 满足
+    因为 $\displaystyle L = \varlimsup_{n \rightarrow \infty} x_n$，所以存在数列 $x_n$ 的单调增子列 $x_{p_n}$ 与 $x_{q_n}$ 满足
     \[\lim_{n \rightarrow \infty} x_{p_n} = L\]
-    也存在数列 $x_n$ 的子列 $x_{q_n}$ 满足
-    \[\left(\lim_{n \rightarrow \infty} x_{q_n} = l\right) \wedge \left(\forall n \in \mathbb{N}^*: p_n < q_n < q_{n+1}\right)\]
+    \[\lim_{n \rightarrow \infty} x_{q_n} = l\]
+
+    容易从 $x_{p_n}$ 以及 $x_{q_n}$ 再构造出两条单调增子列 $x_{p'_n}, x_{q'_n}$ 满足
+    
+    \[\lim_{n \rightarrow \infty} x_{p'_n} = L\]
+    \[\lim_{n \rightarrow \infty} x_{q'_n} = l\]
+    \[\forall n \in \mathbb{N}^*: p'_n < q'_n < p'_{n+1}\]
 
     显然，$l$ 和 $L$ 都是数列 $x_n$ 的子列极限，现在尝试证明：对于一个给定的 $M \in (l,L)$，$M$ 是数集 $\{x_n \mid n \in \mathbb{N}^*\}$ 的一个极限点.
 
     易得，存在正整数 $N_1$ 使得
-    \[\forall n > N_1: x_{p_n} > M > x_{q_n}\]
+    \[\forall n > N_1: x_{p'_n} > M > x_{q'_n}\]
 
     对于任意的 $\varepsilon > 0$，存在正整数 $N_2$ 使得
     \[\forall n > N_2: \lvert x_{n+1} - x_n\rvert < \varepsilon\]
 
-    只要取满足 $k > N_1 \wedge p_k > N_2$ 的正整数 $k$，可以证明 $x_{p_k}, x_{p_k + 1}, x_{p_k+2}, \cdots, x_{q_k}$ 中必有一个数属于 $(M - \varepsilon, M + \varepsilon)$，因此 $M$ 是数集 $\{x_n \mid n \in \mathbb{N}^*\}$ 的一个极限点.
+    只要取满足 $k > N_1 \wedge p'_k > N_2$ 的正整数 $k$，可以证明 $x_{p'_k}, x_{p'_k + 1}, x_{p'_k+2}, \cdots, x_{q'_k}$ 中必有一个数属于 $(M - \varepsilon, M + \varepsilon)$，因此 $M$ 是数集 $\{x_n \mid n \in \mathbb{N}^*\}$ 的一个极限点.
 \end{proof}\vspace{9pt}
 
 \textbf{146.} 证明：
