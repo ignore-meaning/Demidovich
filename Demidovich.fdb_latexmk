@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1718464309 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1718464312 0
-  "Demidovich.aux" 1718464311 579 a06762a54b282fe709701bc76a439bd8 "pdflatex"
-  "Demidovich.out" 1718464311 633 966d9cf191c24e5bc4099eb60d5bbab3 "pdflatex"
+["pdflatex"] 1718711167 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1718711170 0
+  "Demidovich.aux" 1718711169 579 b3b237dc8f3154220a9584071c88d6db "pdflatex"
+  "Demidovich.out" 1718711169 633 966d9cf191c24e5bc4099eb60d5bbab3 "pdflatex"
   "Demidovich.tex" 1718431356 2074 7c31ba50ea4a900abb7545fc270fb762 ""
   "c:/Windows/Fonts/msyh.ttc" 1688779822 19701556 07c864a5b15e68fa47639738197fae38 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
@@ -79,6 +79,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai89.tfm" 1697955127 1172 b917488d56ef9924ada92698c5c12a00 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai8b.tfm" 1697955127 1172 d65cb106123a92c5ee00b1e4fe33aea2 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai98.tfm" 1697955127 1172 4d81bb7f2c285a92a894eb1afd521f3d ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong20.tfm" 1697955128 1172 c443622f792d7e5350ad5382dd8aebb3 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong30.tfm" 1697955128 1172 87d6ba1aff8b955258f6ef7a5d8e86e5 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong4e.tfm" 1697955127 1172 89be830028b08964827966f204abf065 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong4f.tfm" 1697955128 1172 dd7ec0fe171ece0b66015cb8929849f0 ""
@@ -272,8 +273,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697955174 4662804 27f73c2f767ae4579fe38abe9088e726 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697955456 7883403 84e03d0fceca6bffb2ece628408fb22b ""
   "c:/texlive/2023/texmf.cnf" 1697955141 713 e69b156964470283e0530f5060668171 ""
-  "chapters/1.aux" 1718464311 1554 352dc0c46c6a1bb5baa4457e853c442e "pdflatex"
-  "chapters/1.tex" 1718464308 56539 5cbbe5d67a54a6329fe5b5c45b174e45 ""
+  "chapters/1.aux" 1718711169 1554 cb8cc248c0b8e784f4b19b5d5cd9727c "pdflatex"
+  "chapters/1.tex" 1718711166 58304 9eae1a4c6c82c8bf580044df0cb83937 ""
   "e:/file folders/LateX/吉米多维奇/Demidovich.tex" 1718431356 2074 7c31ba50ea4a900abb7545fc270fb762 ""
   (generated)
   "Demidovich.aux"

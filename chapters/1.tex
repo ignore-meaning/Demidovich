@@ -1123,6 +1123,35 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     \[\forall \varepsilon > 0: \exists \delta \in (0,1): \forall x',x'' \in E: (\lvert x'' - x'\rvert < \delta) \Rightarrow (\lvert f(x'') - f(x')\rvert < \varepsilon)\]
 \end{proof}
 
+\textbf{806.} 求证：对于定义在有限开区间 $E = (a,b)$ 的函数 $f$，能够保持连续性地延拓到闭区间 $[a,b]$ 的充要条件是函数 $f$ 在区间 $(a,b)$ 上一致连续.
+
+\begin{proof}
+    能将函数 $f$ 保持连续性地延拓到闭区间 $[a,b]$ 等价于存在连续函数
+    \[\tilde{f}: [a,b] \rightarrow \mathbb{R} \tag{806.1}\]
+    使得 $\tilde{f}|_E = f$. 而这又等价于极限 $\displaystyle \lim_{x \rightarrow a^+} f(x)$ 和 $\displaystyle \lim_{x \rightarrow b^-} f(x)$ 都存在且收敛.
+
+    先证明必要性“$\Rightarrow$”：
+
+    如果延拓性成立，那么满足式 $(806.1)$ 的连续函数 $\tilde{f}$ 存在，因为闭区间上的连续函数一致连续，因此 $\tilde{f}$ 在 $[a,b]$ 上一致连续. 所以在开区间 $E$ 上 $\tilde{f}|_E = f$ 一致连续.
+
+    现在证明充分性“$\Leftarrow$”：
+
+    如果函数 $f$ 在 $E$ 上一致连续，那么对于任意小的 $\varepsilon$，都存在正实数 $\delta$ 使得
+    \[\omega[f, U_E^\delta(b)] < \varepsilon \tag{806.2}\]
+
+    现在对于任何趋于 $b^-$ 的数列 $\{x_n\}$ 都有：对于任意小的 $\delta$，存在正整数 $N$ 使得
+    \[\forall n > N: x_n \in U_E^\delta(b) \tag{806.3}\]
+
+    而这时有
+    \[\forall m,n > N: \lvert f(x_m) - f(x_n)\rvert < \varepsilon \tag{806.4}\]
+
+    综合式 $(806.2),(806.3),(806.4)$，可得
+    \[\forall \varepsilon > 0: \exists N \in \mathbb{N}^*: \forall m,n > N: \lvert f(x_m) - f(x_n)\rvert < \varepsilon \tag{806.5}\]
+    从而数列 $\{f(x_n)\}$ 是柯西数列，存在极限而且收敛.
+
+    所以函数 $f$ 在 $b^-$ 处的极限的确存在且收敛. 同理函数 $f$ 在 $a^+$ 处的极限也存在且收敛.
+\end{proof}
+
 \subsection{小结}
 需要能够处理以下问题：
 
