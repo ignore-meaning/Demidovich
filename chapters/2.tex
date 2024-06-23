@@ -1,0 +1,18 @@
+\section{一元函数微分学}
+\subsection{高阶的导数和微分}
+\textbf{1188.} 设
+\[y = \frac{ax + b}{cx + d}\]
+求 $y^{(n)}$.
+
+\begin{proof}
+    \[y = \frac{a}{c} + \frac{bc - ad}{c} \cdot (cx + d)^{-1}\]
+
+    设 $z = (cx + d)^{-1}$，有
+    \[y^{(n)} = \frac{bc - ad}{c} \cdot z^{(n)}\]
+
+    通过数学归纳法不难得到
+    \[z^{(n)} = \frac{n!(-c)^n}{(cx + d)^{n+1}}\]
+
+    所以
+    \[y^{(n)} = (ad - bc) \cdot \frac{n! (-c)^{n-1}}{(cx + d)^{n+1}}\]
+\end{proof}
