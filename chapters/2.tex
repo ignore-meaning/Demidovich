@@ -16,3 +16,47 @@
     所以
     \[y^{(n)} = (ad - bc) \cdot \frac{n! (-c)^{n-1}}{(cx + d)^{n+1}}\]
 \end{proof}
+
+\subsection{罗尔定理、拉格朗日定理和柯西定理}
+
+\textbf{1239.} 设定义在闭区间 $[a,b]$ 上的函数 $f$ 在定义域上有连续的 $p+q$ 阶导数，在 $(a,b)$ 上有 $p + q + 1$ 阶导数，并且
+\[f(a) = f'(a) = \cdots = f^{(p)}(a) = 0\]
+\[f(b) = f'(b) = \cdots = f^{(q)}(b) = 0\]
+求证：存在 $\xi \in (a,b)$ 使得
+\[f^{(p + q + 1)}(\xi) = 0\]
+
+\begin{proof}
+    不失一般性地，认为 $p \leqslant q$.
+
+    考虑 $f^{(n)}(x)$ 在 $E$ 上的零点个数，用 $Z(n)$ 表示.
+
+    因为 $f(a) = f(b) = 0$，所以 $Z(0) \geqslant 2$.
+
+    又因为 $f(a) = f(b)$，所以一定存在 $\xi \in (a,b)$ 使得 $f'(\xi) = 0$，从而 $Z(1) \geqslant 3$.
+
+    以此类推，可以得到 $Z(p) \geqslant p + 2$.
+
+    因为 $f^{(n)}(x)$ 的任意两个零点之间一定有 $f^{(n+1)}(x)$ 的零点，再加上当 $p \leqslant n \leqslant q$ 时 $f^{(n)}(b) = 0$，可以得到
+    \[\forall n \in [p,q]: Z(n) \geqslant Z(n-1)\]
+    从而
+    \[Z(q) \geqslant Z(p) \geqslant p + 2\]
+
+    然后有
+    \[\forall n \in \mathbb{N}^*: Z(n) \leqslant Z(n-1) - 1\]
+
+    所以
+    \[Z(p+q+1) \geqslant Z(q) - (p + 1) \geqslant (p+2) - (p+1) = 1\]
+
+    而这意味着在 $E$ 上有 $f^{(p+q+1)}(x)$ 的零点.
+\end{proof}\vspace{9pt}
+
+\textbf{1242.} 求证：切比雪夫-拉盖多多项式
+\[L_n(x) = \mathrm{e}^x \frac{\dif^n}{\dif x^n}(x^n \mathrm{e}^{-x})\]
+的所有实根都是正数.
+
+\begin{proof}
+    先求出该多项式的具体形式
+    \[L_n(x) = \sum_{k=0}^{n} \biggl(\frac{n!}{k!}\biggr)^2 \cdot \frac{(-x)^k}{(n-k)!}\]
+
+    然后可以发现当 $x$ 为负数时该求和的每一项都是正数，因此它的根一定不是负数.
+\end{proof}

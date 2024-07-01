@@ -1109,6 +1109,11 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5b.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei54.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5f.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7f.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei30.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei62.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei68.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei89.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl4e.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl51.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl65.tfm
@@ -1122,6 +1127,11 @@ INPUT chapters/2.aux
 INPUT chapters/2.aux
 INPUT ./Demidovich.out
 INPUT ./Demidovich.out
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simsun.ttc
