@@ -60,3 +60,21 @@
 
     然后可以发现当 $x$ 为负数时该求和的每一项都是正数，因此它的根一定不是负数.
 \end{proof}
+
+\textbf{1262.} 求方程
+\[y'(x) = \lambda y(x)\]
+的通解，其中 $\lambda$ 为常数.
+
+\begin{proof}
+    若函数 $y$ 满足方程，则
+    \[\bigl(y(x) \mathrm{e}^{-\lambda x}\bigr)' = y'(x) \mathrm{e}^{-\lambda x} - \lambda y(x) \mathrm{e}^{-\lambda x} = 0\]
+
+    所以存在实数 $C$ 使得
+    \[y(x) \mathrm{e}^{-\lambda x} = C \Rightarrow y(x) = C \mathrm{e}^{\lambda x}\]
+
+    再回头检验发现对于任意的实数 $C$，函数
+    \[y(x) = C \mathrm{e}^{\lambda x}\]
+    都满足方程，因此该方程的通解为
+    \[y(x) = C \mathrm{e}^{\lambda x}\]
+    其中 $C$ 为任意常数.
+\end{proof}
