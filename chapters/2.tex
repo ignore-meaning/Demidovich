@@ -78,3 +78,43 @@
     \[y(x) = C \mathrm{e}^{\lambda x}\]
     其中 $C$ 为任意常数.
 \end{proof}
+
+\subsection{增函数与减函数}
+\textbf{1286.} 对于函数 $f$ 定义域 $E$ 上的一个极限点 $x_0$，若存在正实数 $\delta$ 使得在该点的去心邻域 $\mathring{U}^\delta_E(x_0)$ 上有 $x - x_0$ 与 $f(x) - f(x_0)$ 同号，则称函数 $f$ 在点 $x_0$ 是增函数.
+
+求证：若函数 $f$ 在有限或无限的开区间 $(a,b)$ 上的每一点皆为增函数，则它在此区间上是增函数.
+
+\begin{proof}
+    运用反证法，假如 $f$ 在该区间 $(a,b)$ 上不是增函数，那么存在不同的两点 $x', x'' \in (a,b)$ 满足
+    \[\bigl(x' < x''\bigr) \wedge \bigl(f(x') \geqslant f(x'')\bigr)\]
+
+    根据题意，对于闭区间 $[x', x'']$ 上的任意一点 $x$ 都可以找到一个相应邻域 $U^\delta(x)$，这些开区间能够覆盖 $[x', x'']$，又根据开区间覆盖定理，能够找到有限个开区间
+    \[U^{\delta_1}(x_1), U^{\delta_2}(x_2), \cdots, U^{\delta_n}(x_n)\]
+    来覆盖 $[x', x'']$，其中 $x' \leqslant x_1 < x_2 < \cdots < x_n \leqslant x''$.
+
+    容易验证，
+    \[f(x_1) < f(x_2) < \cdots < f(x_n)\]
+    \[f(x') \leqslant f(x_1)\]
+    \[f(x_n) \leqslant f(x'')\]
+
+    从而得到
+    \[f(x') < f(x'')\]
+
+    矛盾.
+\end{proof}
+
+\subsection{不定式的求值法}
+\textbf{1373.1.} 求证：若函数 $f(x)$ 的二阶导数 $f''(x)$ 存在，则
+\[f''(x) = \lim_{h \rightarrow 0} \frac{f(x + h) + f(x - h) - 2f(x)}{h^2}\]
+
+\begin{proof}
+    将
+    \[\frac{f(x + h) + f(x - h) - 2f(x)}{h^2}\]
+    看作是以 $h$ 为自变量的函数，发现当 $h \rightarrow 0$ 时分子分母都趋近于零，运用洛必达法则
+    \begin{align*}
+        \lim_{h \rightarrow 0} \frac{f(x + h) + f(x - h) - 2h}{h^2} &= \lim_{h \rightarrow 0} \frac{f'(x+h) - f'(x-h)}{2h}\\
+        &= \lim_{h \rightarrow 0} \left[\frac{f'(x+h) - f(x)}{2h} + \frac{f'\bigl(x+(-h)\bigr) - f'(x)}{-2h}\right]\\
+        &= \lim_{h \rightarrow 0} \cdot \frac{f'(x+h) - f(x)}{2h} + \lim_{h \rightarrow 0} \cdot \frac{f'(x+h) - f(x)}{2h}\\
+        &= f''(x)
+    \end{align*}
+\end{proof}

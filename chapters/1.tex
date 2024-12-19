@@ -14,7 +14,7 @@
     \[\Leftrightarrow (1 + x_{k+1}) \cdot \prod_{i=1}^{k}(1+x_i) \geqslant 1 + \sum_{i=1}^{k}x_i + x_{k+1}\]
     \[\Leftarrow (1 + x_{k+1}) \cdot \left(1 + \sum_{i=1}^{k}x_i\right) \geqslant 1 + \sum_{i=1}^{k}x_i + x_{k+1}\]
     \[\Leftrightarrow x_{k+1} \cdot \left(1 + \sum_{i=1}^{k}x_i\right) \geqslant x_{k+1}\]
-    \[\Leftrightarrow \sum_{i=1}^{k}x_ix_{k+1} \geqslant 0 \tag{6.4}\]
+    \[\Leftrightarrow x_{k+1}\sum_{i=1}^{k}x_i \geqslant 0 \tag{6.4}\]
     即当 $n = k+1$ 时不等式 $(6.1)$ 成立.
 \end{proof}\vspace{9pt}
 
@@ -26,7 +26,7 @@
     则原不等式 $(8.1)$ 等价于
     \[A_n < B_n \quad (n>1) \tag{8.2}\]
 
-    又因为 $A_n, B_n$ 恒为正数，$A_2 = 2 < 4/9 = B_2$，因此式 $(8.2)$
+    又因为 $A_n, B_n$ 恒为正数，$A_2 = 2 < 9/4 = B_2$，因此式 $(8.2)$
     \[\Leftarrow \frac{A_{n+1}}{A_n} < \frac{B_{n+1}}{B_n} \quad (n>1) \tag{8.3}\]
     \[\Leftrightarrow n+1 < \frac{n+2}{2} \cdot \left(\frac{n+2}{n+1}\right)^n \quad (n>1)\]
     \[\Leftrightarrow 2 < \left(\frac{n+2}{n+1}\right)^{n+1} \quad (n>1)\]
@@ -105,7 +105,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 \[x^3 = 3\]
 \[\rightarrow (x-1)(x^2+x+1) = 2\]
 \[\rightarrow x = \frac{2}{x^2+x+1}+1\]
-来构造数列满足 $\displaystyle x_{n+1} = \frac{2}{x_n^2+x_n+1}+1$ 来估计 $\sqrt[3]{3}$. 这种估计的方式很经典，但也有点过时了，这个数列收敛的速度并不快.
+来构造数列满足 $\displaystyle x_{n+1} = \frac{2}{x_n^2+x_n+1}+1$ 来估计 $\sqrt[3]{3}$.
 
 \subsection{数列理论}
 \textbf{49.} 求极限
@@ -240,9 +240,9 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     因为
     \begin{align*}
         A_n &= 1 + \sum_{i=1}^{n} {n \choose i} \biggl(\frac{1}{n}\biggr)^i\\
-        &= 1 + \sum_{i=1}^{n} \left[ \frac{n(n-1)\cdots (n-i+1)}{i!} \cdot \biggl(\frac{1}{n}\biggr)^i\right]\\
+        &= 1 + \sum_{i=1}^{n} \left[\frac{n(n-1)\cdots (n-i+1)}{i!} \cdot \biggl(\frac{1}{n}\biggr)^i\right]\\
         &= 1 + \sum_{i=1}^{n} \left[\biggl(1 - \frac{1}{n}\biggr)\biggl(1 - \frac{2}{n}\biggr) \cdots \biggl(1 - \frac{i-1}{n}\biggr) \cdot \frac{1}{i!}\right]\\
-        &= 1 + \sum_{i=1}^{n} \left[\prod_{j=1}^{i-1} \left(1 - \frac{j}{n}\right) \cdot \frac{1}{i!}\right]
+        &= 1 + \sum_{i=1}^{n} \left[\prod_{j=0}^{i-1} \left(1 - \frac{j}{n}\right) \cdot \frac{1}{i!}\right]
     \end{align*}
     \[\lim_{n \rightarrow \infty}A_n = \mathrm{e}\]
     \[A_n < B_n \quad (n=1,2,\cdots)\]
@@ -398,7 +398,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     对于任意的 $\varepsilon > 0$，存在正整数 $N_2$ 使得
     \[\forall n > N_2: \lvert x_{n+1} - x_n\rvert < \varepsilon\]
 
-    只要取满足 $k > N_1 \wedge p'_k > N_2$ 的正整数 $k$，可以证明 $x_{p'_k}, x_{p'_k + 1}, x_{p'_k+2}, \cdots, x_{q'_k}$ 中必有一个数属于 $(M - \varepsilon, M + \varepsilon)$，因此 $M$ 是数集 $\{x_n \mid n \in \mathbb{N}^*\}$ 的一个极限点.
+    只要取满足 $k > N_1 \wedge p'_k > N_2$ 的正整数 $k$，可以证明 $x_{p'_k}, x_{p'_k + 1}, x_{p'_k+2}, \cdots, x_{q'_k}$ 中必有一个数属于 $U^\varepsilon(M)$，因此 $M$ 是数集 $\{x_n \mid n \in \mathbb{N}^*\}$ 的一个极限点.
 \end{proof}\vspace{9pt}
 
 \textbf{146.} 证明：
@@ -461,8 +461,8 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     又因为若 $x_n > 0$ 且 $x_n \neq 1$，则 $x_{n+1} > 1$
 
     因此
-    \[\forall n \in \mathbb{N}^*\backslash\{1\}: x_n > 1\]
-    \[\forall n \in \mathbb{N}^*\backslash\{1\}: x_{n+1} - x_n = \frac{1}{2}\left(\frac{1}{x_n} - x_n\right) < 0\]
+    \[\forall n \in \mathbb{N}^*: x_n > 1\]
+    \[\forall n \in \mathbb{N}^*: x_{n+1} - x_n = \frac{1}{2}\left(\frac{1}{x_n} - x_n\right) < 0\]
     从而数列 $x_n$ 存在极限（最终单调递减数列存在下界）. 设 $\displaystyle \lim_{n \rightarrow \infty} x_n = a \;(1 \leqslant a \leqslant x_1)$，有
     \[a = \lim_{n \rightarrow \infty} x_{n+1} = \lim_{n \rightarrow \infty} \left[\frac{1}{2}\left(x_n + \frac{1}{x_n}\right)\right] = \frac{1}{2} \left( \lim_{n \rightarrow \infty} x_n + \frac{1}{\displaystyle \lim_{n \rightarrow \infty} x_n}\right) = \frac{1}{2}\left(a + \frac{1}{a}\right)\]
     解得
@@ -859,13 +859,13 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     \[\forall \varepsilon > 0: \exists N \in \mathbb{N}^*: \forall n > N: \forall m = 1,2,\cdots,n: \gamma(\alpha_{mn}) \in U^{\varepsilon}(0)\]
 
     所以（再经过一些逻辑思考）可以得到
-    \[\lim_{n \rightarrow \infty} \max \Bigl\{ \bigl|\gamma(\alpha_{in})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\} = 0 \tag{631.3}\]
+    \[\lim_{n \rightarrow \infty} \max \Bigl\{ \bigl|\gamma(\alpha_{mn})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\} = 0 \tag{631.3}\]
 
     又因为对于任意的正整数 $n$ 有
-    \[\left|\sum_{i=1}^{n} \gamma(\alpha_{in})\psi(\alpha_{in})\right| \leqslant \max \Bigl\{ \bigl|\gamma(\alpha_{in})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\} \cdot \sum_{i=1}^{n} \psi(\alpha_{in})\]
+    \[\left|\sum_{i=1}^{n} \gamma(\alpha_{in})\psi(\alpha_{in})\right| \leqslant \max \Bigl\{ \bigl|\gamma(\alpha_{mn})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\} \cdot \sum_{i=1}^{n} \psi(\alpha_{in})\]
 
     所以
-    \[\lim_{n \rightarrow \infty} \left|\sum_{i=1}^{n} \gamma(\alpha_{in})\psi(\alpha_{in})\right| \leqslant \lim_{n \rightarrow \infty} \bigg[\max \Bigl\{ \bigl|\gamma(\alpha_{in})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\}\bigg] \cdot \lim_{n \rightarrow \infty} \sum_{i=1}^{n} \psi(\alpha_{in})\]
+    \[\lim_{n \rightarrow \infty} \left|\sum_{i=1}^{n} \gamma(\alpha_{in})\psi(\alpha_{in})\right| \leqslant \lim_{n \rightarrow \infty} \bigg[\max \Bigl\{ \bigl|\gamma(\alpha_{mn})\bigr| \Bigm| m=1,2,\cdots,n \Bigr\}\bigg] \cdot \lim_{n \rightarrow \infty} \sum_{i=1}^{n} \psi(\alpha_{in})\]
 
     根据上式\footnote{因为公式太长就写不下公式编号了}、式 $(631.3)$ 以及极限
     \[\sum_{i=1}^{n} \psi(\alpha_{in})\]
@@ -902,7 +902,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     \[\forall \varepsilon > 0: \exists N \in \mathbb{N}^*: \forall n > N: \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| \leqslant \left| \sum_{i=0}^{N} \alpha^{n-i}T\right| + \left| \sum_{i=N+1}^{n} \alpha^{n-i} \varepsilon \right| \leqslant T \left|\frac{\alpha^{n-N}}{1 - \alpha}\right| + \left|\frac{\varepsilon}{1 - \alpha}\right|\]
 
     所以
-    \[\forall \varepsilon > 0: \lim_{n \rightarrow \infty} \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| < \left| \frac{\varepsilon}{1 - \alpha}\right|\]
+    \[\forall \varepsilon > 0: \lim_{n \rightarrow \infty} \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| \leqslant \left| \frac{\varepsilon}{1 - \alpha}\right|\]
 
     所以
     \[\lim_{n \rightarrow \infty} \sum_{i=0}^{n} \alpha^{n-i} x_i = 0\]
