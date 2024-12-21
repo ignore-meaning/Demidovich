@@ -536,9 +536,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     \begin{align*}
         \lim_{x \rightarrow 0} \frac{\sqrt{1 + \tan x} - \sqrt{1 + \sin x}}{x^3} &= \lim_{x \rightarrow 0} \frac{\tan x - \sin x}{x^3 \cdot \left(\sqrt{1 + \tan x} + \sqrt{1 + \sin x}\right)}\\
         &= \frac{1}{2} \cdot \lim_{x \rightarrow 0} \frac{\tan x - \sin x}{x^3}\\
-        &= \frac{1}{2} \cdot \lim_{x \rightarrow 0} \frac{\sin x - \sin x \cos x}{x^3 \cos x}\\
-        &= \frac{1}{2} \cdot 1 \cdot \lim_{x \rightarrow 0} \frac{\sin x - \frac{1}{2}\sin 2x}{x^3}\\
-        &= \frac{1}{2} \cdot \lim_{x \rightarrow 0} \frac{\left(x - \frac{1}{6}x^3 + o(x^3)\right) - \frac{1}{2}\left(2x - \frac{1}{6}(2x)^3 + o(x^3)\right)}{x^3}\\
+        &= \frac{1}{2} \cdot \lim_{x \rightarrow 0} \frac{(x + \frac{1}{3}x^3 + o(x^3)) - (x - \frac{1}{6}x^3 + o(x^3))}{x^3}\\
         &= \frac{1}{2} \cdot \frac{1}{2}\\
         &= \frac{1}{4}
     \end{align*}
@@ -742,7 +740,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 \[\forall k > 0: n^k = o(\mathrm{e}^n), \mathrm{e}^{-n} = o(n^{-k})\]
 \begin{proof}
     因为
-    \[\frac{\mathrm{e}^n}{n^k} = \frac{\displaystyle \sum_{i=1}^{\infty} \frac{n^i}{i!}}{n^k} = \sum_{i=1}^{n} \frac{n^{i-k}}{i!} > \frac{n^{\lceil k \rceil - k+1}}{(\lceil k \rceil+1)!}\]
+    \[\frac{\mathrm{e}^n}{n^k} = \frac{\displaystyle \sum_{i=1}^{\infty} \frac{n^i}{i!}}{n^k} = \sum_{i=1}^{\infty} \frac{n^{i-k}}{i!} > \frac{n^{\lceil k \rceil -k+1}}{(\lceil k \rceil+1)!}\]
 
     所以
     \[\forall k > 0: \lim_{n \rightarrow +\infty} \frac{\mathrm{e}^n}{n^k} = \lim_{n \rightarrow +\infty} \frac{n^{-k}}{\mathrm{e}^{-n}} \geqslant \lim_{n \rightarrow +\infty} \frac{n^{\lceil k \rceil - k+1}}{(\lceil k \rceil+1)!} = +\infty\]
@@ -827,10 +825,21 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 
     又因为
     \begin{align*}
-        \sum_{k=n+1}^{\infty} \frac{1}{k!} &= \frac{1}{(n+1)!} + \frac{1}{(n+2)!} + \cdots\\
-        &< \frac{1}{n!n} + \frac{1}{n!n^2} + \cdots\\
-        &= \frac{1}{n!n} \cdot \frac{1}{1-\frac{1}{n}}
+        \frac{1}{(n+1)!} < \sum_{k=n+1}^{\infty} \frac{1}{k!} &= \frac{1}{(n+1)!} + \frac{1}{(n+2)!} + \cdots\\
+        &< \frac{1}{n!(n+1)} + \frac{1}{n!(n+1)^2} + \cdots\\
+        &= \frac{1}{n!(n+1)} \cdot \frac{1}{1-\frac{1}{n+1}}\\
+        &= \frac{1}{n!n}
     \end{align*}
+
+    所以
+    \[\frac{2\pi}{n+1} < 2\pi \mathrm{e} n! < \frac{2\pi}{n}\]
+    继而在 $n \rightarrow \infty$ 时
+    \begin{gather*}
+        2\pi \mathrm{e} n! \sim \frac{2\pi}{n}\\
+        n \sin(2\pi \mathrm{e} n!) \sim n \cdot \frac{2\pi}{n} = 2\pi
+    \end{gather*}
+    从而
+    \[\lim_{n \rightarrow \infty} n \sin(2\pi \mathrm{e} n!) = 2\pi\]
 \end{proof}\vspace{9pt}
 
 \textbf{631.} 设
@@ -844,7 +853,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 此处假定等式 $(1)$ 右端的极限收敛.
 
 \begin{proof}
-    当 $x \rightarrow 0$ 时
+    当 $x \rightarrow 0$ 时设
     \[\varphi(x) = \psi(x) + \gamma(x)\psi(x)\]
     其中 $\displaystyle \lim_{x \rightarrow 0} \gamma(x) = 0$
 
@@ -902,7 +911,7 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     \[\forall \varepsilon > 0: \exists N \in \mathbb{N}^*: \forall n > N: \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| \leqslant \left| \sum_{i=0}^{N} \alpha^{n-i}T\right| + \left| \sum_{i=N+1}^{n} \alpha^{n-i} \varepsilon \right| \leqslant T \left|\frac{\alpha^{n-N}}{1 - \alpha}\right| + \left|\frac{\varepsilon}{1 - \alpha}\right|\]
 
     所以
-    \[\forall \varepsilon > 0: \lim_{n \rightarrow \infty} \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| \leqslant \left| \frac{\varepsilon}{1 - \alpha}\right|\]
+    \[\forall \varepsilon > 0: \lim_{n \rightarrow \infty} \left| \sum_{i=0}^{n} \alpha^{n-i} x_i\right| \leqslant \left| \frac{2\varepsilon}{1 - \alpha}\right|\]
 
     所以
     \[\lim_{n \rightarrow \infty} \sum_{i=0}^{n} \alpha^{n-i} x_i = 0\]
