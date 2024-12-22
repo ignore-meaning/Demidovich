@@ -1037,6 +1037,9 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     如果在某一点 $x_0$ 处有 $f(x_0) = m(x_0)$，那么对于任意满足 $x_0 \leqslant x \leqslant b$ 的点都有
     \[m(x) = \inf_{x_0 \leqslant \xi \leqslant x} \{f(\xi)\}\]
     所以有
+    \[\inf\bigl\{f\bigl[U_E^\delta(x_0)\bigr]\bigr\} \leqslant \inf\bigl\{m\bigl[U_E^\delta(x_0)\bigr]\bigr\} \leqslant \sup\bigl\{m\bigl[U_E^\delta(x_0)\bigr]\bigr\} \leqslant \sup\bigl\{f\bigl[U_E^\delta(x_0)\bigr]\bigr\}\]
+
+    从而
     \[\forall \delta > 0: \omega[m(x), U_E^\delta(x_0)] \leqslant \omega[f(x), U_E^\delta(x_0)]\]
 
     又因为 $f(x)$ 是连续函数，从而
@@ -1057,24 +1060,24 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     设
     \[\inf_{a \leqslant \xi < x_0} \{m(\xi)\} = A(x_0)\]
 
+    我们希望证明
+    \[A(x_0) = m(x_0)\]
+
     因为
-    \[\forall x \in [a,x_0): A(x_0) \leqslant m(x) \leqslant f(x)\]
-    所以
-    \[A(x_0) \leqslant \inf_{a \leqslant \xi < x_0} \{f(\xi)\}\]
+    \[\inf_{a \leqslant \xi < x_0} \{m(\xi)\} = A(x_0) \geqslant m(x_0) = \inf_{a \leqslant \xi \leqslant x_0} \{m(\xi)\}\]
+    是显然的，接下来尝试证明
+    \[A(x_0) \leqslant m(x_0)\]
 
-    又因为
-    \[\forall \varepsilon > 0: \exists x' \in [a,x_0): m(x') < A(x_0) + \varepsilon\]
-    所以
-    \[\forall \varepsilon > 0: \exists x'' \in [a,x_0): f(x'') < A(x_0) + \varepsilon\]
+    根据 $\inf$ 的定义，我们知道对于任意的 $x_0$，我们任取满足 $a \leqslant x'' < x' < x_0$ 的实数 $x'', x'$ 都有
+    \[A(x_0) = \inf_{a \leqslant \xi < x_0}\{m(\xi)\} \leqslant m(x') = \inf_{a \leqslant \xi < x'}\{f(\xi)\} \leqslant f(x'')\]
 
-    综上可得
-    \[\forall \varepsilon > 0: A(x_0) \leqslant \inf_{a \leqslant \xi < x_0}\{f(\xi)\} < A(x_0) + \varepsilon\]
-
-    所以
-    \[m(x_0) = \inf_{a \leqslant \xi < x_0} \{f(\xi)\} = A(x_0) = \lim_{x \rightarrow x_0^-} m(x)\]
+    于是我们证明了
+    \[\forall a \leqslant \xi < x_0: A(x_0) \leqslant f(\xi)\]
+    继而
+    \[A(x_0) \leqslant \inf_{a \leqslant \xi < x_0} \{f(\xi)\} = m(x_0)\]
 \end{proof}\vspace{9pt}
 
-\textbf{752.} 设函数 $f(x)$ 在区间 $(0, +\infty)$ 上连续并有界. 求证：对于任何数 $T$，可求得数列 $x_n \rightarrow +\infty$ 使
+\textbf{752.} 设函数 $f(x)$ 在区间 $(0, +\infty)$ 上连续并有界. 求证：对于任何正实数 $T$，可求得数列 $x_n \rightarrow +\infty$ 使
 \[\lim_{n \rightarrow \infty} f(x_n + T) - f(x_n) = 0\]
 
 \begin{proof}
@@ -1083,16 +1086,16 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
     对于一个正实数 $x'$，按照 $g(x'+nT)$ 的值分为两类，用下面的方式定义集合 $A,B$.
 
     如果
-    \[\forall n \in \mathbb{N}^*: g(x' + nT) \cdot g(x' + T) > 0 \tag{752.1}\]
+    \[\forall n \in \mathbb{N}^*: g(x' + nT) \cdot g(x') > 0 \tag{752.1}\]
     那么 $x' \in A$，否则 $x' \in B$.
 
     易得 $A \cap B = \varnothing, A \cup B = \mathbb{R}^+$.
 
     如果 $A = \varnothing$，那么
-    \[\forall x' \in B = \mathbb{R}^+: \exists x'' \geqslant x' + T: g(x'') = 0\]
+    \[\forall x' \in B = \mathbb{R}^+: \exists x'' \geqslant x': g(x'') = 0\]
 
     所以可以找到一个数列 $x_n$ 使得
-    \[\forall n \in \mathbb{N}^*: \bigl(g(x_n) = 0\bigr) \wedge \bigl(x_{n+1} - x_n \geqslant T\bigr)\]
+    \[g(x_n) = 0, \quad x_n \rightarrow \infty\]
     从而满足题意.
 
     如果 $A \neq \varnothing$，那么随意从 $A$ 中取一个元素 $x'$ 构建数列 $x_n = x' + nT$.
@@ -1112,6 +1115,53 @@ $\sqrt{3}$ 是方程 $x^2 = 3$ 的一个（正）根，将方程变形成
 \textbf{753.} 设 $\varphi(x)$ 及 $\psi(x)$ 为定义在 $\mathbb{R}$ 上的连续周期函数，且
 \[\lim_{x \rightarrow +\infty} [\varphi(x) - \psi(x)] = 0\]
 求证：$\varphi(x) \equiv \psi(x)$.
+
+\begin{proof}
+    容易证明连续周期函数在定义域上一致连续.
+
+    设正实数 $T_1, T_2$ 满足
+    \begin{gather*}
+        \varphi(x+T_1) = \varphi(x)\\
+        \psi(x+T_2) = \psi(x)
+    \end{gather*}
+
+    运用反证法，如果原命题不成立，则存在点 $x'$ 使得 $\varphi(x') \neq \psi(x')$.
+
+    数论知识告诉我们，对于任意的正实数 $\delta$，都能找到正整数 $p,q$ 使得
+    \[\lvert pT_1 - qT_2\rvert < \delta\]
+
+    我们将这个结论转变成另一个有用的形式\footnote{其实并不完全是等价命题转换，还要额外证明一些小性质}：存在正整数列 $p_n, q_n$ 使得当 $n \rightarrow \infty$ 时
+    \begin{gather*}
+        p_n \rightarrow +\infty\\
+        q_n \rightarrow +\infty\\
+        \lvert p_nT_1 - q_nT_2\rvert \rightarrow 0
+    \end{gather*}
+
+    而根据一致连续性可知，对于数列 $a_n, b_n$，当 $n \rightarrow \infty$ 时
+    \[a_n - b_n \rightarrow 0 \Rightarrow \Bigl[\varphi(a_n) - \varphi(b_n) \rightarrow 0 \wedge \psi(a_n) - \psi(b_n) \rightarrow 0\Bigr]\]
+    然后我们现在来考察数列 $\varphi(x' + p_nT_1) - \psi(x' + q_nT_2)$.
+
+    因为
+    \begin{gather*}
+        \lim_{n \rightarrow \infty} \varphi(x' + p_n T_1) = \varphi(x')\\
+        \lim_{n \rightarrow \infty} \psi(x' + q_n T_2) = \psi(x')\\
+        \lim_{n \rightarrow \infty} (x' + p_n T_1) - (x' + q_n T_2) = 0
+    \end{gather*}
+    所以
+    \begin{gather*}
+        \lim_{n \rightarrow \infty} \varphi(x' + p_nT_1) - \psi(x' + q_nT_2) = \varphi(x') - \psi(x')\\
+        \lim_{n \rightarrow \infty} \varphi(x' + p_n T_1) - \varphi(x' + q_n T_2) = 0
+    \end{gather*}
+    所以
+    \[\lim_{n \rightarrow \infty} \varphi(x' + q_n T_2) - \psi(x' + q_n T_2) = \varphi(x') - \psi(x')\]
+
+    又因为
+    \[\lim_{x \rightarrow +\infty} \varphi(x) - \psi(x) = 0\]
+
+    所以
+    \[\varphi(x') - \psi(x') = 0\]
+    而这与假设矛盾.
+\end{proof}
 
 \subsection{函数的一致连续性}
 
