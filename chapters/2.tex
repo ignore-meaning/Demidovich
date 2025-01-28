@@ -114,23 +114,7 @@
     \begin{align*}
         \lim_{h \rightarrow 0} \frac{f(x + h) + f(x - h) - 2h}{h^2} &= \lim_{h \rightarrow 0} \frac{f'(x+h) - f'(x-h)}{2h}\\
         &= \lim_{h \rightarrow 0} \left[\frac{f'(x+h) - f(x)}{2h} + \frac{f'\bigl(x+(-h)\bigr) - f'(x)}{-2h}\right]\\
-        &= \lim_{h \rightarrow 0} \frac{f'(x+h) - f(x)}{2h} + \lim_{h \rightarrow 0} \frac{f'(x+h) - f(x)}{2h}\\
+        &= \lim_{h \rightarrow 0} \cdot \frac{f'(x+h) - f(x)}{2h} + \lim_{h \rightarrow 0} \cdot \frac{f'(x+h) - f(x)}{2h}\\
         &= f''(x)
-    \end{align*}
-\end{proof}\vspace{9pt}
-
-\textbf{1373.2.} 研究函数
-\[f(x) = \begin{cases}
-    \frac{1}{x} - \frac{1}{e^x - 1}, & x \neq 0\\
-    \frac{1}{2}, & x = 0
-\end{cases}\]
-在点 $x = 0$ 的可微性.
-
-\begin{proof}
-    在基 $x \rightarrow 0$ 下
-    \begin{align*}
-        \frac{1}{x} - \frac{1}{e^x - 1} &= \frac{1}{x} - \frac{1}{x + x^2/2 + o(x^2)}\\
-        &= \frac{x^2/2 + o(x^2)}{x^2 + x^3/2 + o(x^3)}\\
-        &= \frac{1/2 + o(1)}{1 + x/2 + o(x)}
     \end{align*}
 \end{proof}

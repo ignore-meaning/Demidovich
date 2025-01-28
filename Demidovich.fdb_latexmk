@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1735001614 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1735001618 0
-  "Demidovich.aux" 1735001617 603 67ed833f75fb4973d5d595c69f3a19ed "pdflatex"
-  "Demidovich.out" 1735001617 1357 5cc5ae3aced950796d880435447bc4be "pdflatex"
+["pdflatex"] 1734931646 "e:/file folders/LateX/吉米多维奇/Demidovich.tex" "Demidovich.pdf" "Demidovich" 1734931650 0
+  "Demidovich.aux" 1734931649 603 67ed833f75fb4973d5d595c69f3a19ed "pdflatex"
+  "Demidovich.out" 1734931649 1357 5cc5ae3aced950796d880435447bc4be "pdflatex"
   "Demidovich.tex" 1720581353 2116 42e649843051f0a9c5debfdf7fadaa84 ""
-  "Demidovich.toc" 1735001617 1088 5496632ecb9f10242c3c9ee7bd67e4e2 "pdflatex"
+  "Demidovich.toc" 1734931649 1088 5496632ecb9f10242c3c9ee7bd67e4e2 "pdflatex"
   "c:/Windows/Fonts/msyh.ttc" 1688779822 19701556 07c864a5b15e68fa47639738197fae38 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "c:/Windows/Fonts/simkai.ttf" 1571147160 11787328 76179557c160634a761c845ea111c893 ""
@@ -289,10 +289,10 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697955174 4662804 27f73c2f767ae4579fe38abe9088e726 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697955456 7883403 84e03d0fceca6bffb2ece628408fb22b ""
   "c:/texlive/2023/texmf.cnf" 1697955141 713 e69b156964470283e0530f5060668171 ""
-  "chapters/1.aux" 1735001616 1674 73b7170804966082ecf8411753d1441d "pdflatex"
+  "chapters/1.aux" 1734931649 1674 73b7170804966082ecf8411753d1441d "pdflatex"
   "chapters/1.tex" 1734879792 61953 d3ab74d1b7b1b85ef85dba748e3a8b37 ""
-  "chapters/2.aux" 1735001617 1384 69a55ca4c71c779b5365740537362a06 "pdflatex"
-  "chapters/2.tex" 1735001613 5423 db51fd966b5621aded4185d860b70d08 ""
+  "chapters/2.aux" 1734931649 1384 69a55ca4c71c779b5365740537362a06 "pdflatex"
+  "chapters/2.tex" 1734931645 4951 9f029ad3f90bf61d1d577a147d3278f8 ""
   "e:/file folders/LateX/吉米多维奇/Demidovich.tex" 1720581353 2116 42e649843051f0a9c5debfdf7fadaa84 ""
   (generated)
   "Demidovich.aux"
